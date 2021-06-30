@@ -1,0 +1,26 @@
+User Hierarchy Application
+===========================
+
+This program maintains a list of roles and users with roles
+The RoleManager maintains the list the roles and parent-child relationship between them
+The UserManager maintains the user list and determine the user hierarchy with the help of the RoleManager
+This program uses Composite design pattern where each User has a list of users who are subordinate to him.
+The UserManager has a function called getAllSubordinates which determines all the subordinates of a given user by recursively finding all the subordinates
+
+
+RUN
+===
+Input folder contains the list of roles and users in json format
+
+To run the app in linux, from the application root folder
+
+php  src/app.php
+
+NB: You can change the value of USER_ID constant in the app.php file to select different valid user
+
+TEST
+====
+
+To run the test go to test folder and run the following command
+
+./phpuint  SubordinateTest.php
